@@ -1,9 +1,9 @@
-#include <stdio.h>
+#include <stdio.h>       // print korar jonno use kora hoiseee
 #include <string.h>
 #include <stdlib.h>
 
-#define MAX_STUDENTS 100
-#define NAME_LEN 50
+#define MAX_STUDENTS 100 // eita diye amra max student er list banannor jonno niyeci
+#define NAME_LEN 50      // 50 joner name amra edit korte parbo
 
 
 typedef struct {                //student er list ta kemon hobe seta
@@ -15,7 +15,7 @@ typedef struct {                //student er list ta kemon hobe seta
 Student students[MAX_STUDENTS];
 int total_students = 50;
 
-// Function prototypes
+
 void initialize_students();            // amader ki ki udeshho (prototyes)
 void add_student();
 void find_student();
@@ -65,7 +65,7 @@ void initialize_students() {                    // age theke list er modhe 50 jo
     for (int i = 0; i < total_students; i++) {
         sprintf(students[i].name, "Student_%d", i + 1);
         students[i].roll = i + 1;
-        students[i].class = (i % 10) + 1; // Classes range from 1 to 10
+        students[i].class = (i % 10) + 1;            // Classes er je  range hobe  seta  from 1 to 10 porjonto bindoman thakbe
     }
 }
 
@@ -103,11 +103,11 @@ void find_student() {                        // student khujar jonno amra ei fun
 }
 
 
-void delete_student() {                                  // amra je student delete korbo tar jonno ei function create koreci
+void delete_student() {                        +89          // amra je student delete korbo tar jonno ei function create koreci
     char name[NAME_LEN];
     printf("Enter student's name to delete: ");
     scanf(" %[^\n]", name);
-
+     return 1;
     int index = find_student_index(name);
     if (index == -1) {
         printf("Student not found.\n");
