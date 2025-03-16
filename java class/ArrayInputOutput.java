@@ -9,7 +9,6 @@ public class ArrayInputOutput {
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = scanner.nextInt();
         }
-
         System.out.println("You entered:");
         for (int num : numbers) {
             System.out.print(num + " ");
